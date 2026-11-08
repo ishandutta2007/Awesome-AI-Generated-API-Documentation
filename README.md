@@ -32,71 +32,31 @@ Contributions welcome! Open a PR to add/update entries. Keep descriptions factua
 
 ## Table of Contents
 
+- [Sector Overview & Market Dynamics](#sector-overview--market-dynamics)
 - [SaaS/Hosted Platforms](#saas-hosted-platforms)
-
 - [Open-Source GitHub Projects](#open-source-github-projects)
-
 - [How to Contribute](#how-to-contribute)
-
 - [Disclaimer](#disclaimer)
 
+## Sector Overview & Market Dynamics
 
+The API documentation tools and developer portals market is currently valued at approximately **$2.8 billion** and is projected to reach **$7.6 billion** over the next decade (growing at ~11.7% CAGR), spurred by the rapid expansion of API-first architectures and AI-driven developer workflows. The sector is **moderately fragmented** rather than winner-take-all; despite heavyweight incumbents like Postman and SmartBear anchoring enterprise API testing and management, developer preference for modular docs-as-code pipelines, specialized agentic authoring platforms (e.g., Mintlify, ReadMe), and deeply entrenched open-source building blocks (e.g., Scalar, Docusaurus, Backstage) sustains a vibrant, multi-vendor ecosystem.
 
 ## SaaS/Hosted Platforms
 
+| Platform | Company Scale (Valuation / Revenue) | Starting Pricing (Paid Tier) | Free Tier Limits | Key Capabilities & Trade-Offs |
+| :--- | :--- | :--- | :--- | :--- |
+| **Postman** | **$5.6B valuation** (~$300M+ ARR) | **$19/user/month** (Team plan, billed annually) | **Free Forever Plan**: 1 user (solo developer), up to 3 collection runs/month in cloud, limited mock server calls, and 50 Postbot AI credits/month. | Dual documentation paths (native Postman docs via Postbot or full AI docs sites via Fern integration). Broad API testing and management suite. |
+| **Mintlify** | **$500M valuation** (~$45M Series B, ARR in multi-millions) | **$450/month** (Pro plan, billed annually) | **Free Forever Starter Plan**: Up to 5 editor seats, 1 custom domain, Git sync, MCP server, and standard API playground. AI agent authoring is plan-gated to Pro/Enterprise. | Full docs-as-code platform with agentic AI writer that opens GitHub PRs or directly commits. Static agent egress requires Enterprise. |
+| **SwaggerHub** (SmartBear) | **~$250M+ ARR** (SmartBear parent, PE-backed by Vista & Francisco Partners) | **$29/user/month** (Team plan, billed annually) | **14-day free trial** of Team/Enterprise tier (Open-source Swagger Editor/UI/Codegen tools remain freely self-hosted). Free individual tier capped at 10 APIs and 1 public portal product. | Natural language portal page creation (Portal AI), visual OpenAPI design, and team standardization. AI page generation capped at 10,000 lines of OpenAPI reference. |
+| **Stoplight** (SmartBear) | **~$250M+ ARR** (Acquired by SmartBear in 2023) | **$44/month** (Basic plan, billed annually; or $56/month monthly) | **Free Forever Community Plan**: 1 user seat, 1 active project, visual OpenAPI designer, instant mock server, and basic hosted docs. | Design-first API documentation with visual OpenAPI editing, Prism mocking, and Spectral style linting. Less specialized AI authoring depth than newer agent-native platforms. |
+| **ReadMe** | **~$36M valuation** (~$10M–$12M ARR) | **$250/month** (Pro plan, billed annually; includes 5 seats) | **Free Forever Starter Plan**: 1 admin seat, 1 project, 1 published API version, and 7-day analytics retention. Ask AI reader assistant requires a $150/mo add-on. | AI Agent in the editor with model picker (Claude Opus, Gemini, GPT), codebase indexing, OpenAPI alignment, and multi-page auditing. |
+| **Fern** | **Acquired by Postman** ($13M prior funding raised) | **Custom Enterprise quote** (Intermediate documentation tiers streamlined to Free + Enterprise) | **Free Forever Plan**: Up to 10 team members, 1 documentation site, custom domain, and 250 AI credits/month (Ask Fern costs 2 credits/msg, AI examples cost 1 credit). | Docs-as-code platform with native SDK generation and automated `llms.txt` / Markdown optimization for external AI agents. Slack docs updates consume 50 credits/session. |
+| **GitBook** | **Bootstrapped / Lean** (~$3.7M–$4M ARR) | **$65/site/month + $12/user/month** (Essential plan, billed annually) | **Free Forever Plan**: 1 user seat, standard `gitbook.io` subdomain (no custom domain), and 10 GitBook Agent messages/week. | Visual and markdown collaboration with Git sync; GitBook Agent writes docs, translates, flags styleguide issues, and participates as a reviewer in change requests. |
+| **Scalar** | **Venture-backed** (General Catalyst, Abstract Ventures; early-stage ARR) | **$125/month** (Pro plan, billed annually; or $150/month monthly) | **Free Forever Plan**: 1 editor seat, up to 3 APIs in registry, SDK support up to 25 endpoints (1 language target), and 50 Agent Scalar AI credits. | Modern, lightweight OpenAPI reference renderer and API client; offers hosted developer portals and SDK generation, plus an MIT open-source version. |
+| **Redocly** | **Venture-backed / Private** (Early-stage ARR) | **$249/month** (Pro plan, billed annually; includes 3 projects) | **30-day free trial** of hosted Pro/Scale platform. Permanent free usage available via open-source Redoc CE (renderer) and Redocly CLI (linter/bundler). | API documentation platform featuring in-site AI assistant, full MCP server support (`/mcp`), and automated `llms.txt` export. Advanced platform governance requires Scale/Enterprise. |
 
 
-- **Mintlify**
-
-  **Docs-as-code platform with an agentic AI writer**. **Features**: The **Mintlify agent** researches (searches your docs, connected repos, and the web), plans a structured task list, writes content following your standards, validates via Mintlify CLI, and **opens a pull request** for review—or commits directly to your deploy branch if you trust it . Handles images, diagrams, and Slack attachments; references source code from any repo with the GitHub App installed; MCP server for AI coding tools like Cursor and Claude Code . **Pricing**: Agent requires **Pro or Enterprise plan**; static agent egress for IP allowlists requires **Enterprise** . **Free tier**: Limited; agent gated. **Best for**: teams wanting an agent that works asynchronously through PRs with full context of their docs and codebase—**trade-off**: agent is plan-gated; static egress is enterprise-only.
-
-
-
-- **ReadMe**
-
-  **API documentation platform with an AI Agent in the editor**. **Features**: The **Agent** drafts, edits, and researches documentation from a chat panel, using your current page and OpenAPI spec to produce output matching actual endpoints and parameters . Example prompts include "write a getting started guide from our API spec," "audit every page for consistency," and "fix all linter issues across the site" . Model picker supports **Claude Opus 5, Gemini 3.8 Flash, GPT5.6 Terra**, and more; can index your codebase for additional context and fetch external URLs . **MCP server and agent skills** let external agents create projects and write docs from code or existing sites . **Pricing**: Agent available on **Pro plans**; Starter gets limited complimentary answers . **Free tier**: Limited on Starter. **Best for**: teams wanting a chat-based agent that understands their OpenAPI spec and can audit across multiple pages—**trade-off**: full agent on Pro; Starter answers are limited.
-
-
-
-- **GitBook**
-
-  **Documentation platform with an AI teammate**. **Features**: **GitBook Agent** writes docs from prompts, imports PDFs/Word into formatted pages, plans bigger changes as **change requests** (opens, explains edits, responds to feedback), follows your styleguide and site-level instructions, translates docs, and can be summoned from comments with `@gitbook` . Also acts as a **reviewer on change requests**—a docs linter flagging style guide issues and suggesting fixes . **Content gaps** (beta) connects to support conversations and tickets to identify documentation gaps and propose changes automatically . **Pricing**: **Free for all plans while in beta**; non-Pro/non-trial users get **10 messages per week**; translations priced separately . **Free tier**: Yes, 10 messages/week. **Best for**: teams wanting an agent integrated into the full GitBook workflow—authoring, review, and gap detection—**trade-off**: beta; 10 messages/week is a tight limit on free tier.
-
-
-
-- **Fern**
-
-  **Docs-as-code platform with AI features and agent-ready output**. **Features**: **Ask Fern** answers user questions with citations from your docs, in-docs, in Slack, or via API . **Fern Agent** writes docs from inside Fern, opening a pull request with the described change—on request or on a schedule . The coding agent you already use can write Fern docs once Fern's skill and MCP server teach it the site structure . **AI-generated examples** create realistic API examples from your spec . Every site is automatically optimized for AI: hosts `llms.txt`, serves Markdown instead of HTML to AI agents, and exposes a standards-based API catalog . **Pricing**: **Usage-based AI credits**—Free plans get 250 credits, Postman Free plans get 500, Enterprise custom; Ask Fern costs **2 credits per message**, AI examples **1 credit**, Docs update in Slack **50 credits per session** . **Free tier**: Yes, 250 AI credits. **Best for**: teams wanting AI features plus automatic llms.txt/Markdown optimization without extra work—**trade-off**: credits metered per feature; Slack sessions are expensive (50 credits).
-
-
-
-- **SwaggerHub**
-
-  **API design and documentation platform with AI page creation**. **Features**: **SwaggerHub Portal AI** creates, edits, or enhances Portal pages by describing them in natural language . You can select a **custom template** to align with organizational standards, and AI uses the API references you select to understand features and generate relevant content . **Limitation**: AI page creation supports API references with **10,000 lines or fewer**—larger APIs should be split for accuracy . **Pricing**: Quote-only. **Free tier**: Limited. **Best for**: teams already on SwaggerHub wanting AI-assisted Portal page creation—**trade-off**: 10K-line cap per request; portal-focused rather than full-site agentic authoring.
-
-
-
-- **Redocly**
-
-  **API docs platform with AI assistant and agent-ready output**. **Features**: **AI assistant** answers questions grounded in your documentation, with configuration, web component embedding, login-protected content support, and analytics on user questions . **Agent-ready output**: `llms.txt` in the llmstxt.org format, **agent skills** (task-focused instruction files), **Model Context Protocol server** at `/mcp` for external AI tools, and **WebMCP tools** for in-browser agents . The built-in Docs MCP server supports the **2026-07-28 MCP protocol**, GraphQL, multi-version APIs, and locale-aware search . **Pricing**: Quote-only; features tiered. **Free tier**: Limited. **Best for**: teams wanting both an in-site AI assistant and full MCP/agent exposure—**trade-off**: enterprise features gated; MCP configuration required.
-
-
-
-- **Postman**
-
-  **API platform with two documentation paths**. **Features**: **Postman documentation** for quick API reference publishing from collections, with **Postbot for writing descriptions** . For comprehensive docs, **Fern documentation** generates a full docs site from a Postman collection with AI-powered features including intelligent search and `llms.txt` . **Pricing**: Postman Free available; Fern integration may require Fern plan. **Free tier**: Yes, Postman Free. **Best for**: teams already on Postman wanting to publish from collections—**trade-off**: AI depth varies between Postman docs (Postbot) and Fern docs (full AI features).
-
-
-
-- **Stoplight**
-
-  **API design and documentation platform**. **Features**: Interactive API docs, API console, rich markdown articles, code generation, versioning, theming, custom domains . **Note**: No dedicated AI authoring agent surfaced in available search results—AI features appear limited compared to Mintlify, ReadMe, or GitBook. **Pricing**: Tiered plans; free tier available. **Free tier**: Yes, limited. **Best for**: teams wanting design-first API docs with visual OpenAPI editing—**trade-off**: less AI authoring depth than agent-first competitors.
-
-
-
-- **Scalar**
-
-  **OpenAPI reference and API client**. **Features**: OpenAPI-based API reference rendering; API client with a clean interface; widely used as a component in other platforms. **Pricing**: Free (open source) or paid cloud. **Free tier**: Yes. **Best for**: teams wanting a focused OpenAPI renderer without a full docs platform—**trade-off**: not an AI authoring agent; rendering-focused.
 
 
 
