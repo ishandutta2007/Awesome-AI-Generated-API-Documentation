@@ -1,147 +1,161 @@
-# Awesome-AI-Generated-API-Documentation
-
-# Awesome-AI-Generated-API-Documentation
-
-**Top AI Generated API Documentation (Opensource) 🌟 Star if you like it! 🌟**
-
-
-
-**Curated List of SaaS Products & Open-Source GitHub Projects**
-
-*Focused on Agentic Doc Authoring, OpenAPI-to-Markdown Generation, llms.txt & Self-Hosted Documentation Pipelines*
-
-**Last updated: November 2026**
-
-
-
-This repository tracks notable **SaaS platforms** and **open-source projects** for **AI-Generated API Documentation**. These tools enable API teams to turn OpenAPI specs, source code, and prompts into accurate, maintainable documentation—automating the drudgery of writing getting-started guides, endpoint references, and code examples while keeping humans in the review loop.
-
-
-
-**Examples** include Mintlify, ReadMe, GitBook, Fern, SwaggerHub, Redocly, Postman, Stoplight, Scalar, and Docusaurus (the category leaders in commercial and open-source space).
-
-
-
-**Open-source emphasis**: This section is expanded with every relevant project for self-hosted doc generation, OpenAPI rendering, and open documentation infrastructure. **Critical note**: The open-source landscape has matured—**Apimatic** generates Markdown API docs directly from Flask/FastAPI source with optional local Ollama or cloud LLM enhancement , **printing-press** turns OpenAPI contracts into fully offline, agent-ready static docs with built-in llms.txt and AGENTS.md , and **Scalar** provides an MIT-licensed OpenAPI reference that many commercial platforms use under the hood. No open-source project matches Mintlify's agentic PR workflow or ReadMe's multi-page audit capabilities, but for core generation and rendering, the building blocks are production-capable.
-
-
-
-Contributions welcome! Open a PR to add/update entries. Keep descriptions factual and link to official sites.
-
-
-
-## Table of Contents
-
-- [Sector Overview & Market Dynamics](#sector-overview--market-dynamics)
-- [SaaS/Hosted Platforms](#saas-hosted-platforms)
-- [Open-Source GitHub Projects](#open-source-github-projects)
-- [How to Contribute](#how-to-contribute)
-- [Disclaimer](#disclaimer)
-
-## Sector Overview & Market Dynamics
-
-The API documentation tools and developer portals market is currently valued at approximately **$2.8 billion** and is projected to reach **$7.6 billion** over the next decade (growing at ~11.7% CAGR), spurred by the rapid expansion of API-first architectures and AI-driven developer workflows. The sector is **moderately fragmented** rather than winner-take-all; despite heavyweight incumbents like Postman and SmartBear anchoring enterprise API testing and management, developer preference for modular docs-as-code pipelines, specialized agentic authoring platforms (e.g., Mintlify, ReadMe), and deeply entrenched open-source building blocks (e.g., Scalar, Docusaurus, Backstage) sustains a vibrant, multi-vendor ecosystem.
-
-## SaaS/Hosted Platforms
-
-| Platform | Company Scale (Valuation / Revenue) | Starting Pricing (Paid Tier) | Free Tier Limits | Key Capabilities & Trade-Offs |
-| :--- | :--- | :--- | :--- | :--- |
-| **Postman** | **$5.6B valuation** (~$300M+ ARR) | **$19/user/month** (Team plan, billed annually) | **Free Forever Plan**: 1 user (solo developer), up to 3 collection runs/month in cloud, limited mock server calls, and 50 Postbot AI credits/month. | Dual documentation paths (native Postman docs via Postbot or full AI docs sites via Fern integration). Broad API testing and management suite. |
-| **Mintlify** | **$500M valuation** (~$45M Series B, ARR in multi-millions) | **$450/month** (Pro plan, billed annually) | **Free Forever Starter Plan**: Up to 5 editor seats, 1 custom domain, Git sync, MCP server, and standard API playground. AI agent authoring is plan-gated to Pro/Enterprise. | Full docs-as-code platform with agentic AI writer that opens GitHub PRs or directly commits. Static agent egress requires Enterprise. |
-| **SwaggerHub** (SmartBear) | **~$250M+ ARR** (SmartBear parent, PE-backed by Vista & Francisco Partners) | **$29/user/month** (Team plan, billed annually) | **14-day free trial** of Team/Enterprise tier (Open-source Swagger Editor/UI/Codegen tools remain freely self-hosted). Free individual tier capped at 10 APIs and 1 public portal product. | Natural language portal page creation (Portal AI), visual OpenAPI design, and team standardization. AI page generation capped at 10,000 lines of OpenAPI reference. |
-| **Stoplight** (SmartBear) | **~$250M+ ARR** (Acquired by SmartBear in 2023) | **$44/month** (Basic plan, billed annually; or $56/month monthly) | **Free Forever Community Plan**: 1 user seat, 1 active project, visual OpenAPI designer, instant mock server, and basic hosted docs. | Design-first API documentation with visual OpenAPI editing, Prism mocking, and Spectral style linting. Less specialized AI authoring depth than newer agent-native platforms. |
-| **ReadMe** | **~$36M valuation** (~$10M–$12M ARR) | **$250/month** (Pro plan, billed annually; includes 5 seats) | **Free Forever Starter Plan**: 1 admin seat, 1 project, 1 published API version, and 7-day analytics retention. Ask AI reader assistant requires a $150/mo add-on. | AI Agent in the editor with model picker (Claude Opus, Gemini, GPT), codebase indexing, OpenAPI alignment, and multi-page auditing. |
-| **Fern** | **Acquired by Postman** ($13M prior funding raised) | **Custom Enterprise quote** (Intermediate documentation tiers streamlined to Free + Enterprise) | **Free Forever Plan**: Up to 10 team members, 1 documentation site, custom domain, and 250 AI credits/month (Ask Fern costs 2 credits/msg, AI examples cost 1 credit). | Docs-as-code platform with native SDK generation and automated `llms.txt` / Markdown optimization for external AI agents. Slack docs updates consume 50 credits/session. |
-| **GitBook** | **Bootstrapped / Lean** (~$3.7M–$4M ARR) | **$65/site/month + $12/user/month** (Essential plan, billed annually) | **Free Forever Plan**: 1 user seat, standard `gitbook.io` subdomain (no custom domain), and 10 GitBook Agent messages/week. | Visual and markdown collaboration with Git sync; GitBook Agent writes docs, translates, flags styleguide issues, and participates as a reviewer in change requests. |
-| **Scalar** | **Venture-backed** (General Catalyst, Abstract Ventures; early-stage ARR) | **$125/month** (Pro plan, billed annually; or $150/month monthly) | **Free Forever Plan**: 1 editor seat, up to 3 APIs in registry, SDK support up to 25 endpoints (1 language target), and 50 Agent Scalar AI credits. | Modern, lightweight OpenAPI reference renderer and API client; offers hosted developer portals and SDK generation, plus an MIT open-source version. |
-| **Redocly** | **Venture-backed / Private** (Early-stage ARR) | **$249/month** (Pro plan, billed annually; includes 3 projects) | **30-day free trial** of hosted Pro/Scale platform. Permanent free usage available via open-source Redoc CE (renderer) and Redocly CLI (linter/bundler). | API documentation platform featuring in-site AI assistant, full MCP server support (`/mcp`), and automated `llms.txt` export. Advanced platform governance requires Scale/Enterprise. |
-
-
-
-
-
-## Open-Source GitHub Projects
-
-
-
-- **Apimatic**
-
-  **Generate Markdown API docs from source code with optional AI enhancement** (MIT) — **the most practical open-source tool for source-to-Markdown API documentation** found in this research . **Features**: **Scans Flask, FastAPI, and other frameworks** to generate comprehensive Markdown API docs . **AI enhancement is optional**—use local **Ollama** (phi3:mini, llama3:8b) for privacy, or **OpenAI** (gpt-4o-mini), **Google Gemini** (gemini-1.5-flash), or **Groq** (llama3-8b-8192) for speed . **Config commands** store API keys securely in your home directory . **Generation options** include `--src`, `--framework`, `--format markdown`, `--output`, and model selection flags . **Tech stack**: Python (PyPI). **Deploy**: `pip install Apimatic`; `apimatic generate --src . --output API_Docs.md` . **Trade-off**: **Markdown only**—no HTML rendering, no search, no site hosting; you bring the docs platform. **Best for**: developers wanting to generate Markdown API docs from source code with local or cloud LLM enhancement—especially those wanting privacy via Ollama or speed via Groq.
-
-
-
-- **printing-press (ppress)**
-
-  **Agentic-first OpenAPI documentation generator** (Go) — **the most complete open-source tool for turning OpenAPI into agent-ready static docs** . **Features**: **Works 100% offline**—open generated docs from disk, zip them, or share as an archive; publish to any static host (GitHub Pages, S3, Netlify, Cloudflare Pages) . **AI and agent output built in**—`AGENTS.md`, `llms.txt`, per-operation and per-model Markdown, plus JSON artifacts . **API catalogs** from directories of OpenAPI specs with multi-version awareness; **integrated diagnostics** via vacuum reports rendered inline; **Mermaid/UML class diagrams** auto-generated for complex schemas . **Tech stack**: Go. **Deploy**: `curl`, npm, Homebrew, Go install, or Docker; `ppress ./openapi.yaml` . **Trade-off**: **Static docs only**—no hosted platform, no built-in search (browser-native only), no AI authoring agent. **Best for**: teams wanting fully offline, agent-ready OpenAPI docs they can host anywhere—especially those who need `llms.txt` and `AGENTS.md` without a SaaS platform.
-
-
-
-### Additional Strong Open-Source Options
-
-
-
-- **Scalar (open source)** — OpenAPI reference and API client (MIT). Clean rendering, widely adopted. **Note**: **Rendering component, not a generator**—no AI authoring or Markdown generation. **Best for**: embedding an OpenAPI reference in an existing site.
-
-- **Redoc** — OpenAPI reference renderer (MIT). Generates three-panel API docs from OpenAPI specs. **Note**: **Renderer, not an AI generator**—no authoring capabilities. **Best for**: rendering OpenAPI specs as static docs.
-
-- **Docusaurus** — Static site generator for documentation (MIT). **Note**: **Site framework, not an API doc generator**—no OpenAPI parsing or AI authoring; pair with plugins. **Best for**: building a custom docs site where you control every component.
-
-
-
-**Frameworks for building custom systems**: Combine **Apimatic** for source-to-Markdown generation with **printing-press** for OpenAPI-to-agent-ready static docs and **Scalar** for rendering—creating a composable open-source AI docs stack. **None of these match Mintlify's PR-based agent or ReadMe's multi-page audit**, but for generation and agent exposure, the options are production-capable.
-
-
-
-## How to Contribute
-
-
-
-1. Fork the repo.
-
-2. Add/edit entries in `README.md` (follow existing format).
-
-3. Include: name, link, 1–2 sentence description, license (for open-source), and whether it's SaaS or open-source.
-
-4. Submit PR with a short explanation.
-
-
-
-Star the repo if you find it useful!
-
-
-
-## Disclaimer
-
-
-
-- This is a **community-curated** list — not exhaustive and not an endorsement.
-
-- AI documentation platforms handling API specifications and source code must comply with data protection regulations (GDPR, CCPA, etc.) and implement appropriate access controls and IP protection.
-
-- **The "agentic authoring" vs. "AI-assisted page creation" vs. "source-to-Markdown generation" vs. "OpenAPI-to-static-docs" vs. "rendering" distinction is critical.** **Mintlify, ReadMe, GitBook, and Fern** are **agentic authoring** platforms—their agents research, plan, write, and open PRs with proposed changes . **SwaggerHub** offers **AI-assisted page creation**—natural language prompts generate Portal pages, capped at 10K-line API references . **Apimatic** is **source-to-Markdown generation**—it scans code and generates Markdown with optional LLM enhancement . **printing-press** is **OpenAPI-to-static-docs**—it generates offline docs with agent artifacts . **Scalar and Redoc** are **renderers**—they display OpenAPI specs but do not author or generate content. **Choose based on whether you need an agent, page generation, Markdown generation, static docs, or rendering.**
-
-- **Mintlify's agent is plan-gated to Pro or Enterprise**—it opens PRs for review or commits directly if you trust it . **The trade-off**: static egress for IP allowlists requires Enterprise .
-
-- **ReadMe's Agent is on Pro plans**—Starter gets limited complimentary answers . **The model picker (Claude Opus 5, Gemini 3.8 Flash, GPT5.6 Terra) and codebase indexing are the differentiators**—it can audit across multiple pages in one prompt .
-
-- **GitBook Agent is free while in beta**—10 messages/week on non-Pro plans; translations cost extra . **The change-request workflow and `@gitbook` comment summoning are unique**—it responds to feedback within the change request .
-
-- **Fern's AI credits are metered per feature**—Ask Fern is **2 credits/message**, AI examples **1 credit**, Slack docs update **50 credits/session** . **Every site automatically hosts `llms.txt` and serves Markdown to AI agents**—no configuration needed .
-
-- **SwaggerHub's AI page creation is capped at 10,000 lines of API reference**—larger APIs must be split . **Do not assume it handles large enterprise specs in one pass.**
-
-- **Apimatic is the most practical open-source source-to-Markdown generator**—scans Flask/FastAPI, generates Markdown, and supports local Ollama for privacy or cloud LLMs for speed . **The trade-off**: Markdown only—no rendering or hosting.
-
-- **printing-press is the most complete open-source OpenAPI-to-static-docs tool**—fully offline, agent artifacts (llms.txt, AGENTS.md), Mermaid diagrams, and vacuum diagnostics . **The trade-off**: static only—no hosted platform or search.
-
-- Self-hosted open-source solutions require proper setup (Python for Apimatic, Go for printing-press) and ongoing maintenance. **API documentation tools process proprietary specifications and source code**—ensure your deployment meets your organization's IP protection and security requirements before processing production assets.
-
-
+# Awesome AI-Generated API Documentation 🤖📚
+
+<p align="center">
+  <img src="assets/banner.svg" alt="Awesome AI-Generated API Documentation Banner" width="100%" />
+</p>
+
+<p align="center">
+  <a href="https://github.com/ishandutta2007/Awesome-Awesome-Awesome"><img src="https://img.shields.io/badge/Awesmme-%E2%9C%94-blueviolet?style=flat-square&logo=github" alt="Awesome"/></a><a href="https://discord.gg/jc4xtF58Ve"><img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&loooColor=white" alt="Discord" /></a>
+  <a href="https://github.com/ishandutta2007/Awesome-AI-Generated-API-Documentation/stargazers"><img src="https://img.shields.io/github/stars/ishandutta2007/Awesome-AI-Generated-API-Documentation?style=social" alt="GitHub Stars" /></a>
+  <a href="https://github.com/ishandutta2007/Awesome-AI-Generated-API-Documentation/network/members"><img src="https://img.shields.io/github/forks/ishandutta2007/Awesome-AI-Generated-API-Documentation?style=social" alt="GitHub Forks" /></a>
+  <a href="https://github.com/ishandutta2007/Awesome-AI-Generated-API-Documentation/blob/main/LICENSE"><img src="https://img.shields.io/badge/License-MIT-green.svg?style=flat-square" alt="License" /></a>
+  <a href="https://github.com/ishandutta2007"><img alt="GitHub followers" src="https://img.shields.io/github/followers/ishandutta2007?label=Follow" /></a>
+</p>
+
+> **A curated showcase of top SaaS platforms, agentic documentation authoring systems, OpenAPI-to-Markdown generators, llms.txt & AGENTS.md pipelines, and production-ready open-source developer documentation tooling.** 🌟 Star if you find this useful! 🌟
 
 ---
 
+## 📑 Table of Contents
 
+- [🔍 Sector Overview & Market Dynamics](#-sector-overview--market-dynamics)
+- [☁️ SaaS & Hosted Platforms](#️-saas--hosted-platforms)
+- [💻 Open-Source GitHub Projects](#-open-source-github-projects)
+- [🤝 How to Contribute](#-how-to-contribute)
+- [💖 Support & Sponsorship](#-support--sponsorship)
+- [📊 Star History](#-star-history)
+- [⚠️ Disclaimer](#️-disclaimer)
 
-**Made for API documentation teams, developer experience engineers, and organizations building transparent AI-generated documentation solutions.**
+---
 
-Let's make AI-Generated API Documentation more open, data-driven, and agent-ready.
+## 🔍 Sector Overview & Market Dynamics
+
+The API documentation tools and developer portals market is currently valued at approximately **$2.8 billion** and is projected to reach **$7.6 billion** over the next decade (growing at ~11.7% CAGR), spurred by the rapid expansion of API-first architectures and AI-driven developer workflows. The sector is **moderately fragmented** rather than winner-take-all; despite heavyweight incumbents like Postman and SmartBear anchoring enterprise API testing and management, developer preference for modular docs-as-code pipelines, specialized agentic authoring platforms (e.g., Mintlify, ReadMe), and deeply entrenched open-source building blocks (e.g., Scalar, Docusaurus, Backstage) sustains a vibrant, multi-vendor ecosystem.
+
+---
+
+## ☁️ SaaS & Hosted Platforms
+
+| 🚀 Platform | 🏢 Company Scale (Valuation / Revenue) | 💳 Starting Pricing (Paid Tier) | 🎁 Free Tier Limits | 🛠️ Key Capabilities & Trade-Offs |
+| :--- | :--- | :--- | :--- | :--- |
+| **[Postman](https://www.postman.com/)** | **$5.6B valuation** (~$300M+ ARR) | **$19/user/month** (Team plan, billed annually) | **Free Forever Plan**: 1 user (solo developer), up to 3 collection runs/month in cloud, limited mock server calls, and 50 Postbot AI credits/month. | Dual documentation paths (native Postman docs via Postbot or full AI docs sites via Fern integration). Comprehensive API testing, governance, and lifecycle platform. |
+| **[Mintlify](https://mintlify.com/)** | **$500M valuation** (~$45M Series B, ARR in multi-millions) | **$450/month** (Pro plan, billed annually) | **Free Forever Starter Plan**: Up to 5 editor seats, 1 custom domain, Git sync, MCP server, and standard API playground. AI agent authoring is plan-gated to Pro/Enterprise. | Full docs-as-code platform with agentic AI writer that opens GitHub PRs or directly commits. Static agent egress requires Enterprise. |
+| **[SwaggerHub](https://swagger.io/tools/swaggerhub/)** (SmartBear) | **~$250M+ ARR** (SmartBear parent, PE-backed by Vista & Francisco Partners) | **$29/user/month** (Team plan, billed annually) | **14-day free trial** of Team/Enterprise tier (Open-source Swagger Editor/UI/Codegen tools remain freely self-hosted). Free individual tier capped at 10 APIs and 1 public portal product. | Natural language portal page creation (Portal AI), visual OpenAPI design, and team standardization. AI page generation capped at 10,000 lines of OpenAPI reference. |
+| **[Stoplight](https://stoplight.io/)** (SmartBear) | **~$250M+ ARR** (Acquired by SmartBear in 2023) | **$44/month** (Basic plan, billed annually; or $56/month monthly) | **Free Forever Community Plan**: 1 user seat, 1 active project, visual OpenAPI designer, instant mock server, and basic hosted docs. | Design-first API documentation with visual OpenAPI editing, Prism mocking, and Spectral style linting. Less specialized AI authoring depth than newer agent-native platforms. |
+| **[ReadMe](https://readme.com/)** | **~$36M valuation** (~$10M–$12M ARR) | **$250/month** (Pro plan, billed annually; includes 5 seats) | **Free Forever Starter Plan**: 1 admin seat, 1 project, 1 published API version, and 7-day analytics retention. Ask AI reader assistant requires a $150/mo add-on. | AI Agent in the editor with model picker (Claude Opus, Gemini, GPT), codebase indexing, OpenAPI alignment, and multi-page auditing. |
+| **[Fern](https://buildwithfern.com/)** | **Acquired by Postman** ($13M prior funding raised) | **Custom Enterprise quote** (Documentation plans streamlined to Free + Enterprise) | **Free Forever Plan**: Up to 10 team members, 1 documentation site, custom domain, and 250 AI credits/month (Ask Fern costs 2 credits/msg, AI examples cost 1 credit). | Docs-as-code platform with native SDK generation and automated `llms.txt` / Markdown optimization for external AI agents. Slack docs updates consume 50 credits/session. |
+| **[GitBook](https://www.gitbook.com/)** | **Bootstrapped / Lean** (~$3.7M–$4M ARR) | **$65/site/month + $12/user/month** (Essential plan, billed annually) | **Free Forever Plan**: 1 user seat, standard `gitbook.io` subdomain (no custom domain), and 10 GitBook Agent messages/week. | Visual and markdown collaboration with Git sync; GitBook Agent writes docs, translates, flags styleguide issues, and participates as a reviewer in change requests. |
+| **[Scalar](https://scalar.com/)** | **Venture-backed** (General Catalyst, Abstract Ventures; early-stage ARR) | **$125/month** (Pro plan, billed annually; or $150/month monthly) | **Free Forever Plan**: 1 editor seat, up to 3 APIs in registry, SDK support up to 25 endpoints (1 language target), and 50 Agent Scalar AI credits. | Modern, lightweight OpenAPI reference renderer and API client; offers hosted developer portals and SDK generation, plus an MIT open-source version. |
+| **[Redocly](https://redocly.com/)** | **Venture-backed / Private** (Early-stage ARR) | **$249/month** (Pro plan, billed annually; includes 3 projects) | **30-day free trial** of hosted Pro/Scale platform. Permanent free usage available via open-source Redoc CE (renderer) and Redocly CLI (linter/bundler). | API documentation platform featuring in-site AI assistant, full MCP server support (`/mcp`), and automated `llms.txt` export. Advanced platform governance requires Scale/Enterprise. |
+
+---
+
+## 💻 Open-Source GitHub Projects
+
+Sorted in descending order by GitHub stars ⭐:
+
+1. ### [Docusaurus](https://github.com/facebook/docusaurus) [![GitHub stars](https://img.shields.io/github/stars/facebook/docusaurus?style=social&color=white)](https://github.com/facebook/docusaurus/stargazers)
+   - **License**: MIT | **Stack**: React, Node.js
+   - **Description**: Production static site generator widely utilized to assemble customized developer documentation hubs and portals. Equipped with rich plugin ecosystems for OpenAPI rendering (e.g., `docusaurus-plugin-openapi-docs`), localized search, and AI assistant chat embeds.
+   - **Trade-off**: Requires configuration and plugins for OpenAPI ingestion and AI features; not an automated out-of-the-box generator.
+
+2. ### [Slate](https://github.com/slatedocs/slate) [![GitHub stars](https://img.shields.io/github/stars/slatedocs/slate?style=social&color=white)](https://github.com/slatedocs/slate/stargazers)
+   - **License**: Apache-2.0 | **Stack**: Ruby, JavaScript, Markdown
+   - **Description**: The classic, beautiful three-panel API documentation generator inspired by Stripe's documentation. Generates clean, responsive single-page static documentation from Markdown source with multi-language code sample tabs.
+   - **Trade-off**: Markdown-centric; requires conversion utilities to ingest OpenAPI specs directly and lacks native AI agent capabilities.
+
+3. ### [Backstage](https://github.com/backstage/backstage) [![GitHub stars](https://img.shields.io/github/stars/backstage/backstage?style=social&color=white)](https://github.com/backstage/backstage/stargazers)
+   - **License**: Apache-2.0 | **Stack**: TypeScript, React, Node.js
+   - **Description**: Spotify's open-source developer portal platform for centralizing internal software architectures, microservice catalogs, and TechDocs (Docs-as-code using Markdown and MkDocs). Ideal for enterprise teams seeking unified API discovery and service documentation.
+   - **Trade-off**: Enterprise IDP footprint requiring significant deployment, hosting, and engineering maintenance.
+
+4. ### [Swagger UI](https://github.com/swagger-api/swagger-ui) [![GitHub stars](https://img.shields.io/github/stars/swagger-api/swagger-ui?style=social&color=white)](https://github.com/swagger-api/swagger-ui/stargazers)
+   - **License**: Apache-2.0 | **Stack**: JavaScript, React
+   - **Description**: The standard visual rendering tool and interactive sandbox for OpenAPI (Swagger 2.0 and OpenAPI 3.x) specifications. Allows end users to interactively test endpoints directly in the browser.
+   - **Trade-off**: Interactive UI and test sandbox only; lacks long-form narrative document authoring, AI assistance, or docs-as-code workflow tools.
+
+5. ### [OpenAPI Generator](https://github.com/OpenAPITools/openapi-generator) [![GitHub stars](https://img.shields.io/github/stars/OpenAPITools/openapi-generator?style=social&color=white)](https://github.com/OpenAPITools/openapi-generator/stargazers)
+   - **License**: Apache-2.0 | **Stack**: Java
+   - **Description**: Comprehensive generator supporting 50+ client SDKs, server stubs, and static documentation formats (HTML, Cwiki, Markdown, Dynamic HTML) directly from OpenAPI v2 and v3 specifications.
+   - **Trade-off**: CLI and templating generator focused on codegen; produced documentation is basic unless extensively styled or wrapped in a portal framework.
+
+6. ### [Redoc](https://github.com/Redocly/redoc) [![GitHub stars](https://img.shields.io/github/stars/Redocly/redoc?style=social&color=white)](https://github.com/Redocly/redoc/stargazers)
+   - **License**: MIT | **Stack**: TypeScript, React
+   - **Description**: Highly popular three-panel OpenAPI rendering engine. Displays zero-dependency responsive API references with side-by-side code samples, detailed schema models, search, and Markdown description rendering.
+   - **Trade-off**: Static documentation renderer only; does not generate content or provide an AI authoring loop.
+
+7. ### [Scalar](https://github.com/scalar/scalar) [![GitHub stars](https://img.shields.io/github/stars/scalar/scalar?style=social&color=white)](https://github.com/scalar/scalar/stargazers)
+   - **License**: MIT | **Stack**: TypeScript, Vue
+   - **Description**: Modern, high-performance open-source API reference and interactive testing client. Widely adopted across Node.js, Fastify, Elysia, Express, and Python ecosystems as a modern replacement for legacy Swagger UI.
+   - **Trade-off**: OpenAPI viewer and API playground; lacks automated agentic document authoring or native source-code-to-markdown generation.
+
+8. ### [Swagger Editor](https://github.com/swagger-api/swagger-editor) [![GitHub stars](https://img.shields.io/github/stars/swagger-api/swagger-editor?style=social&color=white)](https://github.com/swagger-api/swagger-editor/stargazers)
+   - **License**: Apache-2.0 | **Stack**: JavaScript, React
+   - **Description**: Browser-based design and editing tool for OpenAPI descriptions. Features real-time schema validation, auto-completion, linting, and simultaneous side-by-side Swagger UI documentation preview.
+   - **Trade-off**: Focused on spec editing and design rather than serving as a full-fledged hosted developer documentation hub.
+
+9. ### [Stoplight Elements](https://github.com/stoplightio/elements) [![GitHub stars](https://img.shields.io/github/stars/stoplightio/elements?style=social&color=white)](https://github.com/stoplightio/elements/stargazers)
+   - **License**: Apache-2.0 | **Stack**: TypeScript, React, Web Components
+   - **Description**: Embeddable API documentation components powered by OpenAPI and Markdown. Available as standard web components or React libraries to drop interactive API docs into any existing website or framework.
+   - **Trade-off**: Client-side UI component; requires you to manage your own build pipeline, hosting, and content generation.
+
+10. ### [RapiDoc](https://github.com/rapi-doc/RapiDoc) [![GitHub stars](https://img.shields.io/github/stars/rapi-doc/RapiDoc?style=social&color=white)](https://github.com/rapi-doc/RapiDoc/stargazers)
+    - **License**: MIT | **Stack**: JavaScript, Lit Web Components
+    - **Description**: Ultra-customizable, dependency-free Web Component that produces clean, interactive API documentation from any OpenAPI 3.x spec. Supports theming, custom fonts, embedded testing consoles, and multiple view layouts.
+    - **Trade-off**: UI rendering component only; does not generate specifications or provide AI authoring assistance.
+
+11. ### [AsyncAPI Generator](https://github.com/asyncapi/generator) [![GitHub stars](https://img.shields.io/github/stars/asyncapi/generator?style=social&color=white)](https://github.com/asyncapi/generator/stargazers)
+    - **License**: Apache-2.0 | **Stack**: JavaScript, Node.js
+    - **Description**: The official generator for Event-Driven Architectures and AsyncAPI specifications. Generates HTML, Markdown docs, code stubs, and schemas from event/messaging API definitions.
+    - **Trade-off**: Geared toward asynchronous and event-driven specs (Kafka, WebSockets, MQTT) rather than standard synchronous REST OpenAPI contracts.
+
+12. ### [printing-press (ppress)](https://github.com/pb33f/printing-press) [![GitHub stars](https://img.shields.io/github/stars/pb33f/printing-press?style=social&color=white)](https://github.com/pb33f/printing-press/stargazers)
+    - **License**: MIT | **Stack**: Go
+    - **Description**: Agentic-first OpenAPI documentation generator that operates 100% offline. Generates `AGENTS.md`, `llms.txt`, per-operation Markdown, interactive catalogs, Mermaid diagrams, and vacuum diagnostics for AI agents and LLM ingestion without requiring SaaS subscriptions.
+    - **Trade-off**: Static documentation generator only; browser-native search without hosted server infrastructure.
+
+---
+
+## 🤝 How to Contribute
+
+Contributions are warmly welcome! Help make this the most comprehensive index of AI-driven developer documentation tooling:
+
+1. 🍴 **Fork** the repository.
+2. 🌿 Create a new feature branch (`git checkout -b feature/add-new-tool`).
+3. ✍️ Add or update entries following the established format (include company valuation/revenue or GitHub star badges, specific tier pricing, free limits, and honest trade-offs).
+4. 🚀 Push your branch and open a **Pull Request** with a concise description of your additions.
+
+---
+
+## 💖 Support & Sponsorship
+
+If you find this repository valuable for your development workflow or research, please consider supporting the project:
+
+- ⭐ **Star** this repository on GitHub!
+- 🍴 **Fork** and share with your team or community.
+- ☕ **Buy a coffee & sponsor**: Support continued open-source research via the [GitHub Sponsor Dashboard](https://github.com/sponsors/ishandutta2007).
+
+---
+
+## 📊 Star History
+
+[![Star History Chart](https://www.star-history.com/svg?repos=ishandutta2007/Awesome-AI-Generated-API-Documentation&type=date&legend=top-left)](https://www.star-history.com/#ishandutta2007/Awesome-AI-Generated-API-Documentation&type=date&legend=top-left)
+
+---
+
+## ⚠️ Disclaimer
+
+- This is a **community-curated** list — not exhaustive and not an endorsement.
+- AI documentation platforms handling API specifications and source code must comply with data protection regulations (GDPR, CCPA, etc.) and implement appropriate access controls and IP protection.
+- **The "agentic authoring" vs. "AI-assisted page creation" vs. "source-to-Markdown generation" vs. "OpenAPI-to-static-docs" vs. "rendering" distinction is critical:**
+  - **Mintlify, ReadMe, GitBook, and Fern** provide **agentic authoring**—their AI agents research, plan, write, and open PRs with proposed documentation changes.
+  - **SwaggerHub** provides **AI-assisted page creation**—natural language prompts generate Portal pages, capped at 10,000-line API references.
+  - **printing-press** provides **OpenAPI-to-static-docs with agent exposure**—offline static docs with built-in `llms.txt` and `AGENTS.md`.
+  - **Scalar, Redoc, and Swagger UI** are **renderers**—they display OpenAPI specs interactively but do not author new content independently.
+- Self-hosted open-source solutions require proper setup and ongoing maintenance. Ensure any self-hosted tooling matches your organization's IP protection and security requirements before processing production specifications.
+
+---
+
+<p align="center">
+  <sub>Made with ❤️ for API documentation teams, developer experience engineers, and builders of transparent AI-generated documentation solutions.</sub>
+</p>
