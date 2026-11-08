@@ -6,7 +6,7 @@
 
 <p align="center">
   <a href="https://github.com/ishandutta2007/Awesome-Awesome-Awesome"><img src="https://img.shields.io/badge/Awesmme-%E2%9C%94-blueviolet?style=flat-square&logo=github" alt="Awesome"/></a><a href="https://discord.gg/jc4xtF58Ve"><img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&loooColor=white" alt="Discord" /></a>
-  <a href="https://github.com/ishandutta2007/Awesome-AI-Generated-API-Documentation/stargazers"><img src="https://img.shields.io/github/stars/ishandutta2007/Awesome-AI-Generated-API-Documentation?style=social" alt="GitHub Stars" /></a>
+  <a href="https://github.com/ishandutta2007/Awesome-AI-Generated-API-Documentation/stargazers"><img src="https://img.shields.io/github/stars/ishandutta2007/Awesome-AI-Generated-API-Documentation?style=social" alt="GitHub_Stars" /></a>
   <a href="https://github.com/ishandutta2007/Awesome-AI-Generated-API-Documentation/network/members"><img src="https://img.shields.io/github/forks/ishandutta2007/Awesome-AI-Generated-API-Documentation?style=social" alt="GitHub Forks" /></a>
   <a href="https://github.com/ishandutta2007/Awesome-AI-Generated-API-Documentation/blob/main/LICENSE"><img src="https://img.shields.io/badge/License-MIT-green.svg?style=flat-square" alt="License" /></a>
   <a href="https://github.com/ishandutta2007"><img alt="GitHub followers" src="https://img.shields.io/github/followers/ishandutta2007?label=Follow" /></a>
@@ -52,64 +52,64 @@ The API documentation tools and developer portals market is currently valued at 
 
 ## 💻 Open-Source GitHub Projects
 
-Sorted in descending order by GitHub stars ⭐:
+Sorted in descending order by GitHub_Stars ⭐:
 
-1. ### [Docusaurus](https://github.com/facebook/docusaurus) [![GitHub stars](https://img.shields.io/github/stars/facebook/docusaurus?style=social&color=white)](https://github.com/facebook/docusaurus/stargazers)
+1. ### [Docusaurus](https://github.com/facebook/docusaurus) [![GitHub_Stars](https://img.shields.io/github/stars/facebook/docusaurus?style=social&color=white)](https://github.com/facebook/docusaurus/stargazers)
    - **License**: MIT | **Stack**: React, Node.js
    - **Description**: Production static site generator widely utilized to assemble customized developer documentation hubs and portals. Equipped with rich plugin ecosystems for OpenAPI rendering (e.g., `docusaurus-plugin-openapi-docs`), localized search, and AI assistant chat embeds.
    - **Trade-off**: Requires configuration and plugins for OpenAPI ingestion and AI features; not an automated out-of-the-box generator.
 
-2. ### [Slate](https://github.com/slatedocs/slate) [![GitHub stars](https://img.shields.io/github/stars/slatedocs/slate?style=social&color=white)](https://github.com/slatedocs/slate/stargazers)
+2. ### [Slate](https://github.com/slatedocs/slate) [![GitHub_Stars](https://img.shields.io/github/stars/slatedocs/slate?style=social&color=white)](https://github.com/slatedocs/slate/stargazers)
    - **License**: Apache-2.0 | **Stack**: Ruby, JavaScript, Markdown
    - **Description**: The classic, beautiful three-panel API documentation generator inspired by Stripe's documentation. Generates clean, responsive single-page static documentation from Markdown source with multi-language code sample tabs.
    - **Trade-off**: Markdown-centric; requires conversion utilities to ingest OpenAPI specs directly and lacks native AI agent capabilities.
 
-3. ### [Backstage](https://github.com/backstage/backstage) [![GitHub stars](https://img.shields.io/github/stars/backstage/backstage?style=social&color=white)](https://github.com/backstage/backstage/stargazers)
+3. ### [Backstage](https://github.com/backstage/backstage) [![GitHub_Stars](https://img.shields.io/github/stars/backstage/backstage?style=social&color=white)](https://github.com/backstage/backstage/stargazers)
    - **License**: Apache-2.0 | **Stack**: TypeScript, React, Node.js
    - **Description**: Spotify's open-source developer portal platform for centralizing internal software architectures, microservice catalogs, and TechDocs (Docs-as-code using Markdown and MkDocs). Ideal for enterprise teams seeking unified API discovery and service documentation.
    - **Trade-off**: Enterprise IDP footprint requiring significant deployment, hosting, and engineering maintenance.
 
-4. ### [Swagger UI](https://github.com/swagger-api/swagger-ui) [![GitHub stars](https://img.shields.io/github/stars/swagger-api/swagger-ui?style=social&color=white)](https://github.com/swagger-api/swagger-ui/stargazers)
+4. ### [Swagger UI](https://github.com/swagger-api/swagger-ui) [![GitHub_Stars](https://img.shields.io/github/stars/swagger-api/swagger-ui?style=social&color=white)](https://github.com/swagger-api/swagger-ui/stargazers)
    - **License**: Apache-2.0 | **Stack**: JavaScript, React
    - **Description**: The standard visual rendering tool and interactive sandbox for OpenAPI (Swagger 2.0 and OpenAPI 3.x) specifications. Allows end users to interactively test endpoints directly in the browser.
    - **Trade-off**: Interactive UI and test sandbox only; lacks long-form narrative document authoring, AI assistance, or docs-as-code workflow tools.
 
-5. ### [OpenAPI Generator](https://github.com/OpenAPITools/openapi-generator) [![GitHub stars](https://img.shields.io/github/stars/OpenAPITools/openapi-generator?style=social&color=white)](https://github.com/OpenAPITools/openapi-generator/stargazers)
+5. ### [OpenAPI Generator](https://github.com/OpenAPITools/openapi-generator) [![GitHub_Stars](https://img.shields.io/github/stars/OpenAPITools/openapi-generator?style=social&color=white)](https://github.com/OpenAPITools/openapi-generator/stargazers)
    - **License**: Apache-2.0 | **Stack**: Java
    - **Description**: Comprehensive generator supporting 50+ client SDKs, server stubs, and static documentation formats (HTML, Cwiki, Markdown, Dynamic HTML) directly from OpenAPI v2 and v3 specifications.
    - **Trade-off**: CLI and templating generator focused on codegen; produced documentation is basic unless extensively styled or wrapped in a portal framework.
 
-6. ### [Redoc](https://github.com/Redocly/redoc) [![GitHub stars](https://img.shields.io/github/stars/Redocly/redoc?style=social&color=white)](https://github.com/Redocly/redoc/stargazers)
+6. ### [Redoc](https://github.com/Redocly/redoc) [![GitHub_Stars](https://img.shields.io/github/stars/Redocly/redoc?style=social&color=white)](https://github.com/Redocly/redoc/stargazers)
    - **License**: MIT | **Stack**: TypeScript, React
    - **Description**: Highly popular three-panel OpenAPI rendering engine. Displays zero-dependency responsive API references with side-by-side code samples, detailed schema models, search, and Markdown description rendering.
    - **Trade-off**: Static documentation renderer only; does not generate content or provide an AI authoring loop.
 
-7. ### [Scalar](https://github.com/scalar/scalar) [![GitHub stars](https://img.shields.io/github/stars/scalar/scalar?style=social&color=white)](https://github.com/scalar/scalar/stargazers)
+7. ### [Scalar](https://github.com/scalar/scalar) [![GitHub_Stars](https://img.shields.io/github/stars/scalar/scalar?style=social&color=white)](https://github.com/scalar/scalar/stargazers)
    - **License**: MIT | **Stack**: TypeScript, Vue
    - **Description**: Modern, high-performance open-source API reference and interactive testing client. Widely adopted across Node.js, Fastify, Elysia, Express, and Python ecosystems as a modern replacement for legacy Swagger UI.
    - **Trade-off**: OpenAPI viewer and API playground; lacks automated agentic document authoring or native source-code-to-markdown generation.
 
-8. ### [Swagger Editor](https://github.com/swagger-api/swagger-editor) [![GitHub stars](https://img.shields.io/github/stars/swagger-api/swagger-editor?style=social&color=white)](https://github.com/swagger-api/swagger-editor/stargazers)
+8. ### [Swagger Editor](https://github.com/swagger-api/swagger-editor) [![GitHub_Stars](https://img.shields.io/github/stars/swagger-api/swagger-editor?style=social&color=white)](https://github.com/swagger-api/swagger-editor/stargazers)
    - **License**: Apache-2.0 | **Stack**: JavaScript, React
    - **Description**: Browser-based design and editing tool for OpenAPI descriptions. Features real-time schema validation, auto-completion, linting, and simultaneous side-by-side Swagger UI documentation preview.
    - **Trade-off**: Focused on spec editing and design rather than serving as a full-fledged hosted developer documentation hub.
 
-9. ### [Stoplight Elements](https://github.com/stoplightio/elements) [![GitHub stars](https://img.shields.io/github/stars/stoplightio/elements?style=social&color=white)](https://github.com/stoplightio/elements/stargazers)
+9. ### [Stoplight Elements](https://github.com/stoplightio/elements) [![GitHub_Stars](https://img.shields.io/github/stars/stoplightio/elements?style=social&color=white)](https://github.com/stoplightio/elements/stargazers)
    - **License**: Apache-2.0 | **Stack**: TypeScript, React, Web Components
    - **Description**: Embeddable API documentation components powered by OpenAPI and Markdown. Available as standard web components or React libraries to drop interactive API docs into any existing website or framework.
    - **Trade-off**: Client-side UI component; requires you to manage your own build pipeline, hosting, and content generation.
 
-10. ### [RapiDoc](https://github.com/rapi-doc/RapiDoc) [![GitHub stars](https://img.shields.io/github/stars/rapi-doc/RapiDoc?style=social&color=white)](https://github.com/rapi-doc/RapiDoc/stargazers)
+10. ### [RapiDoc](https://github.com/rapi-doc/RapiDoc) [![GitHub_Stars](https://img.shields.io/github/stars/rapi-doc/RapiDoc?style=social&color=white)](https://github.com/rapi-doc/RapiDoc/stargazers)
     - **License**: MIT | **Stack**: JavaScript, Lit Web Components
     - **Description**: Ultra-customizable, dependency-free Web Component that produces clean, interactive API documentation from any OpenAPI 3.x spec. Supports theming, custom fonts, embedded testing consoles, and multiple view layouts.
     - **Trade-off**: UI rendering component only; does not generate specifications or provide AI authoring assistance.
 
-11. ### [AsyncAPI Generator](https://github.com/asyncapi/generator) [![GitHub stars](https://img.shields.io/github/stars/asyncapi/generator?style=social&color=white)](https://github.com/asyncapi/generator/stargazers)
+11. ### [AsyncAPI Generator](https://github.com/asyncapi/generator) [![GitHub_Stars](https://img.shields.io/github/stars/asyncapi/generator?style=social&color=white)](https://github.com/asyncapi/generator/stargazers)
     - **License**: Apache-2.0 | **Stack**: JavaScript, Node.js
     - **Description**: The official generator for Event-Driven Architectures and AsyncAPI specifications. Generates HTML, Markdown docs, code stubs, and schemas from event/messaging API definitions.
     - **Trade-off**: Geared toward asynchronous and event-driven specs (Kafka, WebSockets, MQTT) rather than standard synchronous REST OpenAPI contracts.
 
-12. ### [printing-press (ppress)](https://github.com/pb33f/printing-press) [![GitHub stars](https://img.shields.io/github/stars/pb33f/printing-press?style=social&color=white)](https://github.com/pb33f/printing-press/stargazers)
+12. ### [printing-press (ppress)](https://github.com/pb33f/printing-press) [![GitHub_Stars](https://img.shields.io/github/stars/pb33f/printing-press?style=social&color=white)](https://github.com/pb33f/printing-press/stargazers)
     - **License**: MIT | **Stack**: Go
     - **Description**: Agentic-first OpenAPI documentation generator that operates 100% offline. Generates `AGENTS.md`, `llms.txt`, per-operation Markdown, interactive catalogs, Mermaid diagrams, and vacuum diagnostics for AI agents and LLM ingestion without requiring SaaS subscriptions.
     - **Trade-off**: Static documentation generator only; browser-native search without hosted server infrastructure.
@@ -122,7 +122,7 @@ Contributions are warmly welcome! Help make this the most comprehensive index of
 
 1. 🍴 **Fork** the repository.
 2. 🌿 Create a new feature branch (`git checkout -b feature/add-new-tool`).
-3. ✍️ Add or update entries following the established format (include company valuation/revenue or GitHub star badges, specific tier pricing, free limits, and honest trade-offs).
+3. ✍️ Add or update entries following the established format (include company valuation/revenue or GitHub Stars_Badges, specific tier pricing, free limits, and honest trade-offs).
 4. 🚀 Push your branch and open a **Pull Request** with a concise description of your additions.
 
 ---
